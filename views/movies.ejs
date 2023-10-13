@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Movie-Library</title>
+</head>
+
+<body>
+    <h1>📽️ Cine W▶rld</h1>
+    <div class="container">
+        <ul>
+            <% movies.forEach(movie=> { %>
+                <li class="movie-card">
+                    <h2 class="title">
+                        <%= movie.title %>
+                    </h2>
+                    <h3 class="year">
+                        <%= movie.year %>
+                    </h3>
+                    <h4 class="genre">
+                        <%= movie.genre %>
+                    </h4>
+                   
+                   
+                    <img src="<%= movie.src %>" alt="<%= movie.title %>">
+                    <h5 class="director">
+                        <%= movie.Director %></h5>
+                    <h5 class="description">
+                        <%= movie.Description %>
+                    </h5>
+
+                </li>
+                <% }); %>
+        </ul>
+    </div>
+</body>
+
+</html>
